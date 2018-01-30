@@ -9,7 +9,8 @@ var AppView = Backbone.View.extend({
     this.render(); // render the AppView
     // We had to generate videoList AFTER appview was
     // rendered - videoList looked for .list
-    this.videoList = new VideoListView();
+    this.videoList = new VideoListView(this.videos);
+    // console.log(this.videos.models[0]);
   },
 
 
