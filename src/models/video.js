@@ -6,6 +6,7 @@ var Video = Backbone.Model.extend({
   },
 
   select: function() {
+    // 2nd argument of trigger is passed as an argument to the callback listening
     this.trigger('select', this);
   }
 

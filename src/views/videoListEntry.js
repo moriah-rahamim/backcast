@@ -4,10 +4,9 @@ var VideoListEntryView = Backbone.View.extend({
   setEventListeners: function() {
     var currentView = this;
     this.$el.find('.video-list-entry-title').on('click', function() {
-      currentView.model.select.call(currentView);
+      // COME BACK AND EXAMINE WHY
+      currentView.model.select.call(currentView.model);
     });
-    this.on('select', function() {console.log('hallo');});
-
   },
 
   render: function() {

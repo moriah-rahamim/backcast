@@ -9,9 +9,7 @@ var AppView = Backbone.View.extend({
     // rendered - videoList looked for .list
     this.videoList = new VideoListView({collection: this.videos});
     this.videoList.render();
-    // nowPlaying points at the video selected
-    this.nowPlaying = this.videos.models[0];
-    this.videoPlayer = new VideoPlayerView({model: this.nowPlaying});
+    this.videoPlayer = new VideoPlayerView({model: this.videos.models[0]});
     this.videoPlayer.render();
   },
 
