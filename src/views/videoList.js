@@ -18,6 +18,7 @@ var VideoListView = Backbone.View.extend({
   initialize: function() {
     this.videoListEntries = [];
     this.createVideoListEntries();
+    this.collection.on('all', this.render, this);
   },
 
   render: function() {
